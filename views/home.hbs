@@ -1,0 +1,109 @@
+<head>
+    <!-- Cusstom home css -->
+    <link rel="stylesheet" href="stylesheets/home.css">
+    <title>Latam CW/TG</title>
+</head>
+
+<div class="rounded" style="
+    background-image: url('/img/ltmbackground.jpg');
+    box-shadow: inset 0 0 6vw 6vw black; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: 100%; height:50%;"> 
+</div>
+
+<hr class="featurette-divider" />
+<div class="container col-md-8 text-left">
+
+    <p class="h4 text-white text-center">
+        Latam Community es un servidor de SA-MP dedicado exclusivamente para jugadores de Armas Rápidas,
+        en esta página podrás ver toda la información relacionada con el servidor en tiempo real.
+    </p>
+    <hr />
+</div>
+
+<hr class="featurette-divider" />
+
+<div class="container">
+    <div class="container p-4" style="
+        background-color: #0f1011;
+        border-radius: 15px;
+        padding: 20px;
+        width: 200px;
+        height: 150px;
+        width: 400;">
+        <div class="row d-flex justify-content-center">
+            <h4 class="text-white">Listas Competitivas</h4>
+        </div>
+        <div class="row mt-3">
+            <div class="col d-flex justify-content-center">
+                <div class="btn btn-outline-success text-white mr-3">Individual</div>
+                <div class="btn btn-outline-success text-white mr-3">En equipo</div>
+                <div class="btn btn-outline-success text-white">Promedio</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr class="featurette-divider" />
+
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-3">
+        <p class="text-center lead text-white">
+            Unete a nuestro discord
+        </p>
+        <div class="d-flex justify-content-center">
+            <iframe src="https://discord.com/widget?id=736934835158908959&theme=dark" width="350" height="380"
+                allowtransparency="true" frameborder="0"
+                sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+        </div>
+    </div>
+    <div class="">
+
+    </div>
+    <div class="col-md-3">
+        <p class="text-center lead text-white">
+            Información actual del servidor
+        </p>
+        <div class="d-flex justify-content-center rounded">
+            <div class="card" style="
+                width: 20rem; height:380;
+                background-color: #202225;
+                background-image: url(/assets/db9fd9d….png),url(/assets/1c7d080….png);
+                -webkit-box-shadow: 0 1px 0 rgba(0,0,0,.2);
+                box-shadow: 0 1px 0 rgba(0,0,0,.2);
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                -ms-flex-negative: 0;
+                flex-shrink: 0;
+            ">
+                <div class="d-flex justify-content-center" style="
+                background-color: rgb(25, 104, 25); height:18%
+                ">
+                    <h5 class="card-title text-white mt-4">{{serverInfo.Hostname}}</h5>
+                </div>
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted mt-2">Dirección IP: <a
+                            class="text-white"><a class="text-decoration-none" href="samp://{{serverInfo.IP}}:{{serverInfo.Port}}">{{serverInfo.IP}}:{{serverInfo.Port}}</a></h6>
+                    <h6 class="card-subtitle mb-2 text-muted mt-3">Gamemode: <a
+                            class="text-white">{{serverInfo.Gamemode}}</a></h6>
+                    <h6 class="card-subtitle mb-2 text-muted mt-3">Lenguaje: <a
+                            class="text-white">{{serverInfo.Language}}</a></h6>
+                    <h6 class="card-subtitle mb-2 text-muted mt-3">Mapa: <a class="text-white">{{serverInfo.Map}}</a>
+                    </h6>
+                    <h6 class="card-subtitle mb-2 text-muted mt-3">Jugadores: <a
+                            class="text-white">{{serverInfo.Players}}/{{serverInfo.MaxPlayers}}</a></h6>
+                    <h6 class="card-subtitle mb-2 text-muted mt-3">Versión: <a
+                            class="text-white">{{serverInfo.Version}}</a></h6>
+                    <a href="samp://{{serverInfo.IP}}:{{serverInfo.Port}}{{serverInfo.IP}}:{{serverInfo.Port}}" class="btn btn-outline-success mt-3">Agregar servidor a favoritos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr class="featurette-divider" />
+</div>

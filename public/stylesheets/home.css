@@ -1,0 +1,27 @@
+.marketing .col-lg-4 {
+    text-align: center;
+  }
+  
+  .marketing h2 {
+    font-weight: 400;
+  }
+
+  #s{
+    font-size: x-large;
+  }
+  
+  .marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+  }
+  
+  .featurette-divider {
+    margin: 3rem 0;
+  }
+  
+  .featurette-heading {
+    color: white;
+    font-weight: 300;
+    line-height: 2;
+    letter-spacing: -.05rem;
+  }

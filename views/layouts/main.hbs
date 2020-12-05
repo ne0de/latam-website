@@ -1,0 +1,70 @@
+<body>
+    <script src="https://kit.fontawesome.com/4657d46491.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel='icon' href='/favicon.ico' type='image/x-icon'/ >
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <header>
+        <div id="myNav" class="menu" style=" background-color:rgba(0, 0, 0, 0.5);">
+            <div class="menu-content">
+                <a href="#">Iniciar sesión <i class="fas fa-address-book" style="color:white;"></i></a>
+                <a href="#">Información del servidor <i class="fas fa-folder-open" style="color:white;"></i></a>
+                <a href="#">Tops del servidor <i class="far fa-chart-bar" style="color:white;"></i></a>
+                <div class="d-flex flex-row">
+                    <a href="https://www.facebook.com/groups/cw.altokeprro">Facebook <i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="fixed-top" style="top:15px; left: 15px;">
+            <a class="btn-lg text-light" id="openNav">
+                <i class="fas fa-bars"></i>
+            </a>
+        </div>
+
+    </header>
+
+    <main class="">
+        {{{body}}}
+    </main>
+
+
+    <script>
+        class AnimatedNavbar {
+            constructor(navId, buttonId) {
+                this.navbar = document.getElementById(navId);
+                this.button = document.getElementById(buttonId);
+                this.status = 'closed';
+                this.init();
+            }
+            init() {
+                this.button.addEventListener('click', () => { this.action(); });
+            }
+            action() {
+                if (this.status == 'closed') {
+                    this.open();
+                    this.changeButtonToClose();
+                } else {
+                    this.close();
+                    this.changeButtonToOpen();
+                }
+            }
+            open() {
+                this.navbar.style.width = '15%';
+                this.status = 'open';
+            }
+            close() {
+                this.navbar.style.width = '0%';
+                this.status = 'closed';
+            }
+            changeButtonToOpen() {
+                this.button.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+            changeButtonToClose() {
+                this.button.innerHTML = '<i class="fas fa-times"></i>';
+            }
+
+        }
+
+        let nav = new AnimatedNavbar('myNav', 'openNav');
+    </script>
+</body>

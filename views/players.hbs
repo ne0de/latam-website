@@ -1,0 +1,51 @@
+<head>
+    <!-- Cusstom home css -->
+    <link rel="stylesheet" href="stylesheets/home.css">
+    <title>Latam CW/TG</title>
+</head>
+
+<div class="rounded" style="
+    background-image: url('/img/ltmbackground.jpg');
+    box-shadow: inset 0 0 6vw 6vw black; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: 100%; height:50%;">
+</div>
+
+<hr class="featurette-divider" />
+<div class="container col-md-8 text-left">
+
+    <p class="h4 text-white text-center">
+        Todos los jugadores registrados en el servidor
+    </p>
+    <hr />
+</div>
+
+<hr class="featurette-divider" />
+
+<div class="container">
+    <div class="row">
+    {{#each players}}
+    <div class="col">
+        <div class="card bg-dark" style="width: 18rem;">
+            <img class="card-img-top" src="http://weedarr.wdfiles.com/local--files/skinlistc/{{skin}}.png" alt="Card image cap" width="200" height="200">
+            <div class="card-body bg-dark">
+                <h5 class="card-title">{{username}}</h5>
+                <p class="card-text"> </p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-dark text-white ">Ranked: {{ranked}}</li>
+                <li class="list-group-item">En Equipo: {{team_ranked}}</li>
+                <li class="list-group-item">Vestibulum at eros</li>
+            </ul>
+            <div class="card-body">
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+</div>
+<hr class="featurette-divider" />
+</div>

@@ -13,4 +13,18 @@ router.get('/', async function(req, res, next) {
   res.render('home', {serverInfo});
 });
 
+router.get('/players', async function(req, res, next) {
+  const players = await Player.findAll({raw:true});
+  console.log(players);
+  res.send({
+    data: players
+  })
+});
+
+router.get('/jugadores', async function(req, res, next) {
+  const players = await Player.findAll({raw:true});
+  res.render('players', {players});
+});
+
+
 module.exports = router;

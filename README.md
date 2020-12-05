@@ -1,3 +1,3 @@
-# A simple web page of reviews
+# Latam web page
 
-- npm install
+-:'

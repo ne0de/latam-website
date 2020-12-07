@@ -1,7 +1,9 @@
 <head>
-    <!-- Cusstom home css -->
-    <link rel="stylesheet" href="stylesheets/home.css">
-    <title>Latam CW/TG</title>
+    {{#each jugador}}
+    <title>{{username}}</title>
+    {{else}}
+    <title>Error</title>
+    {{/each}}
 </head>
 
 <div class="rounded" style="
@@ -61,7 +63,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <a onClick="window.history.back()" class="btn btn-outline-primary text-white mr-3"><< </a>
+                        <a onClick="window.history.back()" class="btn btn-outline-primary text-white mr-3">
+                            << </a>
                     </div>
                     <div class="col">
                         <a href="/" class="btn btn-outline-primary text-white">Volver al inicio</a>
@@ -72,6 +75,15 @@
 
         </div>
 
+    </div>
+    {{else}}
+    <div class="container ">
+        <div class="row d-flex justify-content-center">
+            <p class="h4 text-white text-center text-danger"> No existe el jugador que quieres ver </p>
+        </div>
+        <div class="row d-flex justify-content-center mt-3">
+            <a href="/" class="btn btn-outline-primary text-white">Volver al inicio</a>
+        </div>
     </div>
     {{/each}}
 </div>

@@ -1,0 +1,65 @@
+<head>
+    <!-- Cusstom home css -->
+    <link rel="stylesheet" href="stylesheets/home.css">
+    <title>Latam CW/TG</title>
+</head>
+
+<div class="rounded" style="
+    background-image: url('/img/ltmbackground.jpg');
+    box-shadow: inset 0 0 6vw 6vw black; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: 100%; height:50%;">
+</div>
+
+<hr class="featurette-divider" />
+<div class="container col-md-8 text-left">
+
+    <p class="h4 text-white text-center">
+        Lista de mejores jugadores por {{tipo}}
+    </p>
+    <hr />
+    <div class="d-flex justify-content-center">
+        <a href="/" class="btn btn-outline-primary text-white">Volver al inicio</a>
+    </div>
+</div>
+
+<hr class="featurette-divider" />
+
+
+<div class="container d-flex justify-content-center">
+    {{#if topPlayers}}
+    <table class="table table-dark text-center" style="
+        background-color: #0f1011;
+        border-radius: 15px;
+        padding: 20px;
+        width: 200px;
+        height: 150px;
+        width: 60%;">>
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">País</th>
+                <th scope="col">Puntaje total</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each topPlayers}}
+            <tr class="">
+                <th scope="row">{{numero}}</th>
+                <td> <a href="/jugador/{{id}}">{{username}}</a></td>
+                <td>{{country}}</td>
+                <td>{{ranked}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    {{else}}
+    <p class="h4 text-white text-center text-danger"> No hay jugadores para mostrar </p>
+    {{/if}}
+</div>
+
+<hr class="featurette-divider" />
+</div>

@@ -1,0 +1,86 @@
+<head>
+    <!-- Cusstom home css -->
+    <link rel="stylesheet" href="stylesheets/home.css">
+    <title>Latam CW/TG</title>
+</head>
+
+<div class="rounded" style="
+    background-image: url('/img/ltmbackground.jpg');
+    box-shadow: inset 0 0 6vw 6vw black; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: 100%; height:50%;">
+</div>
+
+<hr class="featurette-divider" />
+<div class="container d-flex justify-content-center">
+    {{#each jugador}}
+    <div class="card text-white" style="
+        background-color: #0f1011;
+        border-radius: 15px;
+        width: 400;">
+        <div class="card-body">
+            <h5 class="card-title text-center">{{username}}</h5>
+            <div class="row">
+                <div class="col">
+                    <a class="text-muted">Fecha de registro: <a class="text-white">{{day}}/{{month}}/{{year}}</a></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <a class="text-muted">País: <a class="text-white">{{country}}</a></a>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col">
+                    <a class="text-muted">Kills: <a class="text-white">{{kills}}</a></a>
+                </div>
+                <div class="col">
+                    <a class="text-muted">Muertes: <a class="text-white">{{deaths}}</a></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <a class="text-muted">Puntaje ranked: <a class="text-white">{{ranked}}</a></a>
+                </div>
+                <div class="col">
+                    <a class="text-muted">Puntaje en equipo: <a class="text-white">{{team_ranked}}</a></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <a class="text-muted">Duelos ganados: <a class="text-white">{{won_duels}}</a></a>
+                </div>
+                <div class="col">
+                    <a class="text-muted">Duelos perdidos: <a class="text-white">{{lost_duels}}</a></a>
+                </div>
+            </div>
+
+        </div>
+        <div class="card-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <a onClick="window.history.back()" class="btn btn-outline-primary text-white mr-3"><< </a>
+                    </div>
+                    <div class="col">
+                        <a href="/" class="btn btn-outline-primary text-white">Volver al inicio</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    {{/each}}
+</div>
+
+<hr class="featurette-divider" />
+
+<div class="container">
+
+</div>
+
+<hr class="featurette-divider" />
+</div>

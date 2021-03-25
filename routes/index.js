@@ -51,7 +51,11 @@ router.get('/ranked', async function(req, res, next) {
   );
   var tipo = "puntaje individual"
   topPlayers['numero'];
-  topPlayers.forEach((element, index) => { element.numero = index + 1; });
+  topPlayers['puntos'];
+  topPlayers.forEach((element, index) => { 
+    element.numero = index + 1; 
+    element.puntos = element.ranked; 
+  });
   res.render('rankedplayers', {topPlayers, tipo});
 });
 
@@ -71,7 +75,11 @@ router.get('/ranked/equipo', async function(req, res, next) {
   );
   var tipo = "puntaje en equipo"
   topPlayers['numero'];
-  topPlayers.forEach((element, index) => { element.numero = index + 1; });
+  topPlayers['puntos'];
+  topPlayers.forEach((element, index) => { 
+    element.numero = index + 1; 
+    element.numero = element.team_ranked;
+  });
   res.render('rankedplayers', {topPlayers, tipo});
 });
 
@@ -91,7 +99,11 @@ router.get('/duelos/ganados', async function(req, res, next) {
   );
   var tipo = "duelos ganados"
   topPlayers['numero'];
-  topPlayers.forEach((element, index) => { element.numero = index + 1; });
+  topPlayers['puntos'];
+  topPlayers.forEach((element, index) => {
+    element.numero = index + 1; 
+    element.puntos = element.won_duels;
+  });
   res.render('rankedplayers', {topPlayers, tipo});
 });
 
@@ -111,7 +123,12 @@ router.get('/duelos/perdidos', async function(req, res, next) {
   );
   var tipo = "duelos perdidos"
   topPlayers['numero'];
-  topPlayers.forEach((element, index) => { element.numero = index + 1; });
+  topPlayers['puntos'];
+  topPlayers.forEach((element, index) => { 
+    element.numero = index + 1; 
+    element.puntos = element.lost_duels;
+  });
+  console.log(topPlayers)
   res.render('rankedplayers', {topPlayers, tipo});
 });
 

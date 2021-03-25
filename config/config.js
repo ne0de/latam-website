@@ -1,7 +1,7 @@
 module.exports = {
-  HOST: "sql10.freemysqlhosting.net",
-  USER: "sql10380338",
-  PASSWORD: "iDegBd528U",
-  DB: "sql10380338",
+  HOST: "mysql.ultimatecloud.es",
+  USER: "u177_mL9zrTiyEJ",
+  PASSWORD: "1X.TBIug@SGufTz1ivq^PbaR",
+  DB: "s177_ltm",
   DIALECT: "mysql"
 };

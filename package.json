@@ -1,8 +1,8 @@
 {
-  "name": "express",
+  "name": "latam-website",
   "author": "ne0de",
   "description": "simple page with express",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node ./bin/www",

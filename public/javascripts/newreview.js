@@ -1,21 +1,21 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
     $(".text-area").attr("maxlength", 500)
 
-    $('.text-area').bind('input propertychange', function() {
+    $('.text-area').bind('input propertychange', function () {
         $('#maxChars').text($(this).val().length + '/500');
-        if($(this).val().length == 500)
-            $('#maxChars').append('<a class = "font-italic text-danger"> Llegaste al máximo de carácteres! </a>'); 
+        if ($(this).val().length == 500)
+            $('#maxChars').append('<a class = "font-italic text-danger"> Llegaste al máximo de carácteres! </a>');
     });
 
-    $('#botonJuego').find('a').click(function(e){
+    $('#botonJuego').find('a').click(function (e) {
         e.preventDefault();
         idgame = $('#botonJuego').find('#gameId').text();
         $('#btnGameSelected').text($(this).text());
     })
 
     /* send data */
-    $('#send').click(function(e){
+    $('#send').click(function (e) {
         e.preventDefault();
         $.ajax({
             url: '/review',

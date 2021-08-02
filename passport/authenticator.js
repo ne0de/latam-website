@@ -19,10 +19,10 @@ passport.use('register', new localStrategy(
         passReqToCallback: true
     }, async (req, nickname, password, done) => {
         const values = req.body;
-        
-        if(await controller.existAccount(values)){
+
+        if (await controller.existAccount(values)) {
             return done(null, false, req.flash('messageFailure', "Ya existe una cuenta con estos datos."));
-        }else{
+        } else {
             const newUser = await controller.createAccount(values);
             done(null, newUser);
         }
@@ -37,13 +37,13 @@ passport.use('login', new localStrategy(
     }, async (req, nickname, password, done) => {
         const query = await controller.findAccountByNick(nickname);
 
-        if(!query) 
-        return done(null, false, req.flash('messageFailure', "No existe esa cuenta."));
+        if (!query)
+            return done(null, false, req.flash('messageFailure', "No existe esa cuenta."));
 
         const account = query.dataValues;
-        if(password != account.password)
-        return done(null, false, req.flash('messageFailure', "La contraseña es incorrecta."));
-        
+        if (password != account.password)
+            return done(null, false, req.flash('messageFailure', "La contraseña es incorrecta."));
+
         done(null, account);
     }
 ));

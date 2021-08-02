@@ -1,15 +1,15 @@
-function registerNewAccount(){
+function registerNewAccount() {
     const newUser = {
         name: $("#inputNombre").val(),
         surname: $("#inputApellido").val(),
-        nickname:  $("#InputNick").val(),
+        nickname: $("#InputNick").val(),
         password: $("#inputPassword").val(),
         email: $("#inputEmail").val(),
     }
 
-    if(!newUser.nickname || !newUser.name)
+    if (!newUser.nickname || !newUser.name)
         return alert('No pusiste un nick');
-    
+
     $.ajax({
         url: 'http://localhost:3000/user/',
         type: 'POST',
@@ -24,7 +24,7 @@ function registerNewAccount(){
     });
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
     $('#crearCuenta').on('submit', event => {
         event.preventDefault();
         registerNewAccount();
